@@ -1,5 +1,6 @@
 from tokenize import Double
 alumnos={}
+cursos={}
 def ingresar_alumno(alums=[]):
     cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
     for i in range(cantidad):
@@ -14,11 +15,15 @@ def ingresar_alumno(alums=[]):
                         carrera=input("Ingrese el carrera del alumno: ")
                         cantidad = int(input("Ingrese la cantidad de cursos al que se inscribira el alumno: "))
                         if cantidad>0:
+
                             alums[carne] = {
                                 "nombre": nombre,
                                 "age": age,
                                 "carrera": carrera,
-                                "cursos":
+                                "cursos": {
+                                    "nota Tarea"
+
+                                }
                                 }
                         elif cantidad<=0:
                             print("Cantidad invalida")
