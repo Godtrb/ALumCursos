@@ -1,7 +1,7 @@
 from tokenize import Double
 alumnos={}
-def ingresar_alumno(alums{}):
-cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
+def ingresar_alumno(alums=[]):
+    cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
     for i in range(cantidad):
         print(f"\n producto #{i+1}:")
         carne=input("Ingrese el carne del estudiante: ")
@@ -9,37 +9,22 @@ cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
             if carne not in alumnos:
 
                     nombre=input("Ingrese el nombre del alumno: ")
-                    precio=float(input("Ingrese el precio: Q"))
-                    if (precio>0):
-
-                        categoria = int(input("Ingrese la categoria del producto"
-                                              "1)Mujer  2)Hombre  3)Niño "))
-                        if categoria==1|categoria==2|categoria==3:
-                            match categoria:
-                                case 1:
-                                    categoria="Mujer"
-                                case 2:
-                                    categoria="Hombre"
-                                case 3:
-                                    categoria="Niño"
-                            talla = input("Ingrese la talla del producto: ")
-                            cantidad = int(input("Ingrese la cantidad que se agregara del producto: "))
-                            if cantidad>0:
-                                productos[carne] = {
-                                    "nombre": nombre,
-                                    "precio": precio,
-                                    "categoria": categoria,
-                                    "talla": talla,
-                                    "cantidad": cantidad
+                    age=float(input("La edad del alumno:"))
+                    if (age>0):
+                            carrera=input("Ingrese el carrera del alumno: ")
+                            cantidad = int(input("Ingrese la cantidad de cursos al que se inscribira el alumno: "))
+                        if cantidad>0:
+                            alums[carne] = {
+                                "nombre": nombre,
+                                "age": age,
+                                "carrera": carrera,
+                                "cantidad": cantidad
                                 }
-                            elif cantidad<=0:
-                                print("Cantidad invalida")
-                                i=i-1
-                        else:
-                            print("Cantegoria invalida")
+                        elif cantidad<=0:
+                            print("Cantidad invalida")
                             i=i-1
-                    elif precio<=0:
-                        print("Precio invalido.")
+                    elif age<=0:
+                        print("Edad invalida invalido.")
                         i=i-1
 
             else:
