@@ -17,9 +17,23 @@ def ingresar_alumno(alums=[]):
                             for e in range(cantidad):
                                 cursName=input("Ingrese el nombre del curso: ")
                                 not1=int(input("Ingrese la nota de las tareas: "))
-                                not2=int(input("Ingrese la nota del parcial: "))
-                                not3=int(input("Ingrese la nota del proyecto: "))
+                                if(not1>0):
+                                    not2=int(input("Ingrese la nota del parcial: "))
+                                    if(not2>0):
+                                        not3=int(input("Ingrese la nota del proyecto: "))
+                                        if(not3>0):
+                                            print("a")
 
+                                        elif(not3<0):
+                                            print("Nota Invalida")
+                                            e = e - 1
+                                    elif (not2<0):
+                                        print("Nota Invalida")
+                                        e=e-1
+
+                                elif(not1<0):
+                                    print("Nota invalida")
+                                    e=e-1
                             alums[carne] = {
                                 "nombre": nombre,
                                 "age": age,
