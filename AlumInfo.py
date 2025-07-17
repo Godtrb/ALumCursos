@@ -1,11 +1,10 @@
 from tokenize import Double
 alumnos={}
-cursos={}
 def ingresar_alumno(alums=[]):
     cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
     for i in range(cantidad):
-        print(f"\n producto #{i+1}:")
-        carne=input("Ingrese el carne del estudiante: ")
+        print(f"\n estudiante #{i+1}:")
+        carne=int(input("Ingrese el carne del estudiante: "))
         if carne>0:
             if carne not in alumnos:
 
@@ -15,13 +14,18 @@ def ingresar_alumno(alums=[]):
                         carrera=input("Ingrese el carrera del alumno: ")
                         cantidad = int(input("Ingrese la cantidad de cursos al que se inscribira el alumno: "))
                         if cantidad>0:
+                            for e in range(cantidad):
+                                cursName=input("Ingrese el nombre del curso: ")
+                                not1=int(input("Ingrese la nota de las tareas: "))
+                                not2=int(input("Ingrese la nota del parcial: "))
+                                not3=int(input("Ingrese la nota del proyecto: "))
 
                             alums[carne] = {
                                 "nombre": nombre,
                                 "age": age,
                                 "carrera": carrera,
                                 "cursos": {
-                                    "nota Tarea"
+
 
                                 }
                                 }
@@ -38,3 +42,4 @@ def ingresar_alumno(alums=[]):
         elif carne<=0:
             print("Carne no valido.")
             i=i-1
+ingresar_alumno(alumnos)
