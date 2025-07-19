@@ -66,8 +66,16 @@ def ingresar_alumno(alums=[]):
             print("Carne no valido.")
             i=i-1
             for e,data in alumnos.items():
-                print(f"{e})")
+                print(f"Carne: {e})")
                 print(f"Nombre del aluimno:{data['nombre']}")
                 print(f"Carrera:{data['carrera']}")
+                print(f"Correo Electronico:{data['contacto']['correo']}")
+                print(f"Numero telefonico:{data['contacto']['telefono']}")
+                print("Cursos:")
+                for a,datos in data["cursos"].items():
+
+                    print(f"Nota de las tareas:{datos['NotaTearea']}")
+                    print(f"Nota de el proyecto:{datos['NotaProyecto']}")
+                    print(f"Nota del parcial: {datos["NotaParcial"]}")
 
 ingresar_alumno(alumnos)
