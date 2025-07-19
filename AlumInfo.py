@@ -1,7 +1,7 @@
 from tokenize import Double
 alumnos={}
+cursos={}
 def ingresar_alumno(alums=[]):
-    cursos = {}
     cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
     for i in range(cantidad):
         print(f"\n estudiante #{i+1}:")
@@ -65,5 +65,5 @@ def ingresar_alumno(alums=[]):
         elif carne<=0:
             print("Carne no valido.")
             i=i-1
-def dispAlums(alums[])
+
 ingresar_alumno(alumnos)
