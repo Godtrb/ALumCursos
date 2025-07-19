@@ -1,5 +1,6 @@
 from tokenize import Double
 alumnos={}
+cursos={}
 def ingresar_alumno(alums=[]):
     cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
     for i in range(cantidad):
@@ -9,6 +10,8 @@ def ingresar_alumno(alums=[]):
             if carne not in alumnos:
 
                     nombre=input("Ingrese el nombre del alumno: ")
+                    correo = input("Ingrese el correo electrónico del alumno: ")
+                    telefono = input("Ingrese el número de teléfono del alumno: ")
                     age=float(input("La edad del alumno:"))
                     if (age>0):
                         carrera=input("Ingrese el carrera del alumno: ")
@@ -22,7 +25,11 @@ def ingresar_alumno(alums=[]):
                                     if(not2>0):
                                         not3=int(input("Ingrese la nota del proyecto: "))
                                         if(not3>0):
-                                            print("a")
+                                            cursos[cursName] ={
+                                                "NotaTearea":not1,
+                                                "NotaProyecto":not3,
+                                                "NotaParcial":not2
+                                            }
 
                                         elif(not3<0):
                                             print("Nota Invalida")
@@ -38,11 +45,13 @@ def ingresar_alumno(alums=[]):
                                 "nombre": nombre,
                                 "age": age,
                                 "carrera": carrera,
-                                "cursos": {
-
-
+                                "contacto": {
+                                    "correo": correo,
+                                    "telefono": telefono
+                                },
+                                "cusos":cursos
                                 }
-                                }
+                            cursos.clear()
                         elif cantidad<=0:
                             print("Cantidad invalida")
                             i=i-1
@@ -56,4 +65,9 @@ def ingresar_alumno(alums=[]):
         elif carne<=0:
             print("Carne no valido.")
             i=i-1
+            for e,data in alumnos.items():
+                print(f"{e})")
+                print(f"Nombre del aluimno:{data['nombre']}")
+                print(f"Carrera:{data['carrera']}")
+
 ingresar_alumno(alumnos)
